@@ -296,6 +296,14 @@ export default {
       document[op]('keydown', this.__handleArrowKey)
     }
   },
+  created () {
+    const slides = this.__getSlidesNumber();
+    if (this.initSlide >= 0 && this.initSlide < slides) {
+      this.position = -this.initSlide * 100;
+      this.slide = this.initSlide
+      this.positionSlide = this.initSlide
+    }
+  },
   beforeUpdate () {
     const slides = this.__getSlidesNumber()
     if (slides !== this.slidesNumber) {

@@ -1,5 +1,6 @@
 export default {
   props: {
+    initSlide: Number,
     arrows: Boolean,
     dots: Boolean,
     fullscreen: Boolean,
